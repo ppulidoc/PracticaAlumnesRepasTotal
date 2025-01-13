@@ -27,11 +27,11 @@
             app:layout_constraintVertical_bias="0.046" />
 
         <EditText
-            android:id="@+id/editTextAnys"
+            android:id="@+id/editTextAny"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:ems="10"
-            android:hint="Anys"
+            android:hint="Any"
             android:inputType="number"
             android:minHeight="48dp"
             app:layout_constraintBottom_toBottomOf="parent"
