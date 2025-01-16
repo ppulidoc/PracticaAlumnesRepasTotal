@@ -46,5 +46,16 @@ class Repositori {
 
         }
 
+        // Actualitzar un alumne
+
+        fun actualizarAlum(context: Context, alumne: Alumne) {
+            //Connectar la BD
+            repositori_database = initializeDB(context)
+
+            CoroutineScope(IO).launch {
+                repositori_database!!.alumneDao().actualizarAlum(alumne)
+            }
+        }
+
     }
 }

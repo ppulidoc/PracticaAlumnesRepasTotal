@@ -11,8 +11,8 @@
         android:label="fragment_afegir_alumnes"
         tools:layout="@layout/fragment_afegir_alumnes" >
         <action
-            android:id="@+id/action_afegirAlumnes_to_llistarAlumnes"
-            app:destination="@id/llistarAlumnes" />
+            android:id="@+id/action_afegirAlumnes_to_actualizarAlumne"
+            app:destination="@id/actualizarAlumne" />
     </fragment>
     <fragment
         android:id="@+id/llistarAlumnes"
@@ -22,5 +22,14 @@
         <action
             android:id="@+id/action_llistarAlumnes_to_afegirAlumnes"
             app:destination="@id/afegirAlumnes" />
+    </fragment>
+    <fragment
+        android:id="@+id/actualizarAlumne"
+        android:name="com.paudam.practicaalumnesrepastotal.actualizar.ActualizarAlumne"
+        android:label="fragment_actualizar_alumne"
+        tools:layout="@layout/fragment_actualizar_alumne" >
+        <action
+            android:id="@+id/action_actualizarAlumne_to_llistarAlumnes"
+            app:destination="@id/llistarAlumnes" />
     </fragment>
 </navigation>
