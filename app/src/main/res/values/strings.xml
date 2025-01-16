@@ -5,4 +5,14 @@
     <string name="afegir">\n</string>
     <string name="update" />
     <string name="llistar" />
+
+    <string-array name="social_networks_array">
+        <item>None</item>
+        <item>Facebook</item>
+        <item>Reddit</item>
+        <item>Twitter</item>
+        <item>Youtube</item>
+    </string-array>
+
 </resources>
+
