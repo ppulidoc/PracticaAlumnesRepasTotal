@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/afegirAlumnes"
+        android:icon="@drawable/afegir"
+        android:title="@string/afegir" />
+    <item
+        android:id="@+id/actualizarAlumne"
+        android:icon="@drawable/update"
+        android:title="@string/update" />
+    <item
+        android:id="@+id/llistarAlumnes"
+        android:icon="@drawable/llistar"
+        android:title="@string/llistar" />
+</menu>
