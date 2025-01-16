@@ -3,7 +3,9 @@ package com.paudam.practicaalumnesrepastotal.llistar
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.LinearLayout
 import android.widget.TextView
+import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
 import com.paudam.practicaalumnesrepastotal.R
 import com.paudam.practicaalumnesrepastotal.data.Alumne
@@ -29,7 +31,12 @@ class AlumnesAdapter (private val mList: List<Alumne>) : RecyclerView.Adapter<Al
         holder.textViewAny.text = alumne.any.toString()
         holder.textViewNom.text = alumne.nom
         holder.textViewCognom.text = alumne.cognom
+
+        holder.layoutRecycler.setOnClickListener {
+            Toast.makeText(holder.layoutRecycler.context, "Hola Mundo", Toast.LENGTH_SHORT).show()
+        }
     }
+
 
     // return the number of the items in the list
     override fun getItemCount(): Int {
@@ -42,5 +49,6 @@ class AlumnesAdapter (private val mList: List<Alumne>) : RecyclerView.Adapter<Al
         val textViewAny: TextView = itemView.findViewById(R.id.textViewAny)
         val textViewNom: TextView = itemView.findViewById(R.id.textViewNom)
         val textViewCognom: TextView = itemView.findViewById(R.id.textViewCognom)
+        val layoutRecycler: LinearLayout = itemView.findViewById(R.id.linearId)
     }
 }
