@@ -35,11 +35,11 @@ class ActualizarAlumne : Fragment() {
             var nom=binding.editTextNom.text.toString()
             var cognom = binding.editTextCognom.text.toString()
 
-            if (edat != null) {
+            /*if (edat != null) {
                 if (any != null) {
                    actualizarAlumneVM.updAlumne(requireContext(),edat,any,nom,cognom)
                 }
-            }
+            }*/
         }
 
 

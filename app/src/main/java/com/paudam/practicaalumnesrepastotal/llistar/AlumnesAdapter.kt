@@ -36,7 +36,7 @@ class AlumnesAdapter (private val mList: List<Alumne>) : RecyclerView.Adapter<Al
         holder.layoutRecycler.setOnClickListener {view ->
            /* Toast.makeText(holder.layoutRecycler.context, "Hola Mundo", Toast.LENGTH_SHORT).show()*/
 
-            view.findNavController().navigate(R.id.action_llistarAlumnes_to_afegirAlumnes)
+            view.findNavController().navigate(R.id.action_llistarAlumnesFiltrats_to_afegirAlumnes)
 
         }
     }

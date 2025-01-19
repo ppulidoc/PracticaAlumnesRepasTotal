@@ -46,16 +46,19 @@ class Repositori {
 
         }
 
-        // Actualitzar un alumne
-
-        fun actualizarAlum(context: Context, alumne: Alumne) {
+        fun obtenirAlumnesFiltrats(context: Context,edat: Int): LiveData<List<Alumne>>? {
             //Connectar la BD
             repositori_database = initializeDB(context)
 
             CoroutineScope(IO).launch {
-                repositori_database!!.alumneDao().actualizarAlum(alumne)
+                alumnes = repositori_database!!.alumneDao().obtenirAlumneFiltrat(edat)
             }
+
+            return alumnes
+
         }
+
+
 
     }
 }

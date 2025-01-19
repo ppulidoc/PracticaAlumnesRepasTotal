@@ -19,7 +19,8 @@ interface AlumneDAO {
     @Query("SELECT * FROM Alumne ORDER BY edat DESC")
     fun obtenirAlumne(): LiveData<List<Alumne>>
 
-    //fer update
-    @Update(onConflict = OnConflictStrategy.IGNORE)
-    fun actualizarAlum(alumne: Alumne)
+    //select all
+    @Query("SELECT * FROM Alumne WHERE edat = :edat ORDER BY edat DESC")
+    fun obtenirAlumneFiltrat(edat: Int): LiveData<List<Alumne>>
+
 }

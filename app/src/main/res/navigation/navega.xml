@@ -20,8 +20,8 @@
         android:label="fragment_llistar_alumnes"
         tools:layout="@layout/fragment_llistar_alumnes" >
         <action
-            android:id="@+id/action_llistarAlumnes_to_afegirAlumnes"
-            app:destination="@id/afegirAlumnes" />
+            android:id="@+id/action_llistarAlumnes_to_llistarAlumnesFiltrats"
+            app:destination="@id/llistarAlumnesFiltrats" />
     </fragment>
     <fragment
         android:id="@+id/actualizarAlumne"
@@ -31,5 +31,13 @@
         <action
             android:id="@+id/action_actualizarAlumne_to_llistarAlumnes"
             app:destination="@id/llistarAlumnes" />
+    </fragment>
+    <fragment
+        android:id="@+id/llistarAlumnesFiltrats"
+        android:name="com.paudam.practicaalumnesrepastotal.llistarFiltres.LlistarAlumnesFiltrats"
+        android:label="LlistarAlumnesFiltrats" >
+        <action
+            android:id="@+id/action_llistarAlumnesFiltrats_to_afegirAlumnes"
+            app:destination="@id/afegirAlumnes" />
     </fragment>
 </navigation>

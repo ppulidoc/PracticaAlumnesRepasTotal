@@ -12,4 +12,8 @@
         android:id="@+id/llistarAlumnes"
         android:icon="@drawable/llistar"
         android:title="@string/llistar" />
+    <item
+        android:id="@+id/llistarAlumnesFiltrats"
+        android:icon="@drawable/llistar"
+        android:title="FiltradosHard" />
 </menu>
