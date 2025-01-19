@@ -6,6 +6,7 @@ import android.view.ViewGroup
 import android.widget.LinearLayout
 import android.widget.TextView
 import android.widget.Toast
+import androidx.navigation.findNavController
 import androidx.recyclerview.widget.RecyclerView
 import com.paudam.practicaalumnesrepastotal.R
 import com.paudam.practicaalumnesrepastotal.data.Alumne
@@ -32,8 +33,11 @@ class AlumnesAdapter (private val mList: List<Alumne>) : RecyclerView.Adapter<Al
         holder.textViewNom.text = alumne.nom
         holder.textViewCognom.text = alumne.cognom
 
-        holder.layoutRecycler.setOnClickListener {
-            Toast.makeText(holder.layoutRecycler.context, "Hola Mundo", Toast.LENGTH_SHORT).show()
+        holder.layoutRecycler.setOnClickListener {view ->
+           /* Toast.makeText(holder.layoutRecycler.context, "Hola Mundo", Toast.LENGTH_SHORT).show()*/
+
+            view.findNavController().navigate(R.id.action_llistarAlumnes_to_afegirAlumnes)
+
         }
     }
 
