@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/afegirAlumnes"
+            android:icon="@drawable/afegir"
+            android:title="Afegir" />
+        <item
+            android:id="@+id/actualizarAlumne"
+            android:icon="@drawable/update"
+            android:title="actualizar" />
+        <item
+            android:id="@+id/llistarAlumnes"
+            android:icon="@drawable/llistar"
+            android:title="Llistar" />
+        <item
+            android:id="@+id/llistarAlumnesFiltrats"
+            android:icon="@drawable/llistar"
+            android:title="LlistarF" />
+    </group>
+
+
+
+</menu>

@@ -5,6 +5,8 @@
     <string name="afegir">\n</string>
     <string name="update" />
     <string name="llistar" />
+    <string name="nav_open">openvalue</string>
+    <string name="nav_close">clorevalue</string>
 
     <string-array name="social_networks_array">
         <item>None</item>
