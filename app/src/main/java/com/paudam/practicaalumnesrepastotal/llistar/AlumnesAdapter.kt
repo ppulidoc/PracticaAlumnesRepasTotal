@@ -33,12 +33,20 @@ class AlumnesAdapter (private val mList: List<Alumne>) : RecyclerView.Adapter<Al
         holder.textViewNom.text = alumne.nom
         holder.textViewCognom.text = alumne.cognom
 
-        holder.layoutRecycler.setOnClickListener {view ->
-           /* Toast.makeText(holder.layoutRecycler.context, "Hola Mundo", Toast.LENGTH_SHORT).show()*/
+        holder.layoutRecycler.setOnClickListener { view ->
+            val navController = view.findNavController()
+            val currentDestination = navController.currentDestination
 
-            view.findNavController().navigate(R.id.action_llistarAlumnesFiltrats_to_afegirAlumnes)
-
+            if (currentDestination?.getAction(R.id.action_llistarAlumnesFiltrats_to_afegirAlumnes) != null) {
+                navController.navigate(R.id.action_llistarAlumnesFiltrats_to_afegirAlumnes)
+            } else if (currentDestination?.getAction(R.id.action_llistarAlumnes_to_afegirAlumnes) != null) {
+                navController.navigate(R.id.action_llistarAlumnes_to_afegirAlumnes)
+            } else {
+                // Si no hay acciones, navega directamente al destino global
+                navController.navigate(R.id.afegirAlumnes)
+            }
         }
+
     }
 
 

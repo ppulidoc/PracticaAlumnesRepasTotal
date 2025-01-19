@@ -22,6 +22,11 @@
         <action
             android:id="@+id/action_llistarAlumnes_to_llistarAlumnesFiltrats"
             app:destination="@id/llistarAlumnesFiltrats" />
+        <action
+            android:id="@+id/action_llistarAlumnes_to_afegirAlumnes"
+            app:destination="@id/afegirAlumnes" />
+
+
     </fragment>
     <fragment
         android:id="@+id/actualizarAlumne"
