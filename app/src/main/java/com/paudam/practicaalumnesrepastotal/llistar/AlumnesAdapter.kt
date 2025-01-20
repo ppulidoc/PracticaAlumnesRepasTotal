@@ -34,6 +34,8 @@ class AlumnesAdapter (private val mList: List<Alumne>) : RecyclerView.Adapter<Al
         holder.textViewCognom.text = alumne.cognom
 
         holder.layoutRecycler.setOnClickListener { view ->
+
+
             val navController = view.findNavController()
             val currentDestination = navController.currentDestination
 

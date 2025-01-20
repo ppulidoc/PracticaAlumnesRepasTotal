@@ -6,8 +6,7 @@ import com.paudam.practicaalumnesrepastotal.Repositori
 import com.paudam.practicaalumnesrepastotal.data.Alumne
 
 class ActualizarAlumneVM:ViewModel() {
-    /*fun updAlumne(context: Context, edat:Int, any:Int, nom:String, cognom:String) {
-        var alumneUPD= Alumne(edat,any,nom,cognom)
-        Repositori.actualizarAlum(context,alumneUPD)
-    }*/
+    fun updAlumne(context: Context, nombre: String, edat: Int) {
+        Repositori.actualizarAlumne(context,nombre,edat)
+    }
 }

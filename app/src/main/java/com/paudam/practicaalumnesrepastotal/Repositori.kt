@@ -14,6 +14,8 @@ class Repositori {
 
         var alumnes: LiveData<List<Alumne>>? = null
 
+
+
         //funció per a inicialitzar la BD
 
         fun initializeDB(context: Context): dataBase {
@@ -57,6 +59,19 @@ class Repositori {
             return alumnes
 
         }
+
+
+        fun actualizarAlumne(context: Context,nombre: String, edat: Int) {
+            //Connectar la BD
+            repositori_database = initializeDB(context)
+
+            CoroutineScope(IO).launch {
+                repositori_database!!.alumneDao().updateAlumne(nombre,edat)
+            }
+
+        }
+
+
 
 
 

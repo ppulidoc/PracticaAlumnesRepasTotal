@@ -23,4 +23,9 @@ interface AlumneDAO {
     @Query("SELECT * FROM Alumne WHERE edat = :edat ORDER BY edat DESC")
     fun obtenirAlumneFiltrat(edat: Int): LiveData<List<Alumne>>
 
+    //actualizar alumno
+    @Query("UPDATE Alumne SET nom = :nombre WHERE edat = :edat")
+    fun updateAlumne(nombre: String, edat: Int)
+
+
 }

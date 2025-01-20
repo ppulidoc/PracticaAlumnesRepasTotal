@@ -30,16 +30,12 @@ class ActualizarAlumne : Fragment() {
 
         binding.buttonUpdate.setOnClickListener(){
 
-            var edat=binding.editTextEdat.text.toString().toIntOrNull()
-            var any = binding.editTextAny.text.toString().toIntOrNull()
+            var edat=binding.editTextEdat.text.toString().toInt()
             var nom=binding.editTextNom.text.toString()
-            var cognom = binding.editTextCognom.text.toString()
 
-            /*if (edat != null) {
-                if (any != null) {
-                   actualizarAlumneVM.updAlumne(requireContext(),edat,any,nom,cognom)
-                }
-            }*/
+            actualizarAlumneVM.updAlumne(requireContext(),nom,edat)
+
+
         }
 
 
